@@ -180,14 +180,18 @@ td{padding:12px 14px;border-bottom:1px solid rgba(0,0,0,.18);vertical-align:top}
 .news li::before{content:"";width:10px;height:10px;background:var(--yellow);flex:none;transform:translateY(1px)}
 .news .box{background:var(--yellow);color:var(--black);padding:clamp(22px,3vw,32px);display:grid;gap:14px;position:relative}
 .news .box .t{font-family:var(--f-make);font-weight:800;font-size:26px;letter-spacing:-.03em;line-height:1.05}
-.news .btn{display:block;text-align:center;background:var(--black);color:var(--yellow);text-decoration:none;font-family:var(--f-impact);text-transform:uppercase;font-size:22px;letter-spacing:.03em;padding:16px 18px}
-.news .btn:hover,.news .btn:focus-visible{background:var(--paper);color:var(--black);outline:3px solid var(--black)}
+.news .btn{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--cream);color:var(--black);border:3px solid var(--black);box-shadow:6px 6px 0 var(--black);text-decoration:none;font-family:var(--f-impact);text-transform:uppercase;font-size:24px;letter-spacing:.02em;padding:15px 18px;margin-right:6px;transition:transform .12s ease,box-shadow .12s ease,background .12s ease,color .12s ease}
+.news .btn .ar{display:inline-block;transition:transform .15s ease}
+.news .btn:hover,.news .btn:focus-visible{background:var(--black);color:var(--yellow);box-shadow:0 0 0 var(--black);transform:translate(6px,6px);outline:none}
+.news .btn:hover .ar,.news .btn:focus-visible .ar{transform:translateX(5px)}
+@media (prefers-reduced-motion:reduce){.news .btn,.news .btn .ar{transition:none}}
 .news .handle{font-size:14px;user-select:all}
 .news.alt{background:var(--yellow);color:var(--black)}
 .news.alt h2{color:var(--black)}
 .news.alt li::before{background:var(--black)}
 .news.alt .box{background:var(--black);color:var(--cream)}
-.news.alt .btn{background:var(--yellow);color:var(--black)}
+.news.alt .btn{box-shadow:6px 6px 0 var(--yellow)}
+.news.alt .btn:hover,.news.alt .btn:focus-visible{background:var(--yellow);color:var(--black);box-shadow:0 0 0 var(--yellow)}
 .news.alt .brain{color:var(--black)}
 @media (max-width:720px){.news .inner{grid-template-columns:1fr}}
 </style>
@@ -209,7 +213,7 @@ td{padding:12px 14px;border-bottom:1px solid rgba(0,0,0,.18);vertical-align:top}
     <div class="box">
       <p class="t">Únete gratis</p>
       <p>Escríbeme <strong>NEWSLETTER</strong> por Instagram y te sumo a la lista.</p>
-      <a class="btn" href="https://www.instagram.com/luisostos88/" target="_blank" rel="noopener">Quiero unirme</a>
+      <a class="btn" href="https://www.instagram.com/luisostos88/" target="_blank" rel="noopener">Quiero unirme <span class="ar" aria-hidden="true">→</span></a>
       <p class="handle">@luisostos88</p>
     </div>
   </div>
